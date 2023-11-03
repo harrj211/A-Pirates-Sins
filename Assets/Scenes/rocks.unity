@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 9136fa4458cd095429d2705d4a47bfbf, type: 2}
+  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.43892297, g: 0.48713094, b: 0.5673902, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -837,22 +837,13 @@ GameObject:
   m_Component:
   - component: {fileID: 303872250}
   - component: {fileID: 303872249}
-  - component: {fileID: 303872248}
   m_Layer: 0
   m_Name: Display 1
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &303872248
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 303872247}
-  m_Enabled: 1
 --- !u!20 &303872249
 Camera:
   m_ObjectHideFlags: 0
@@ -1249,7 +1240,8 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 6204c41579b3472479a6bae0a271652e, type: 2}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4319754065042616387, guid: 6933375681575c64487a3427da0d73b1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6933375681575c64487a3427da0d73b1, type: 3}
 --- !u!4 &366031370 stripped
 Transform:
@@ -3138,22 +3130,13 @@ GameObject:
   m_Component:
   - component: {fileID: 730931007}
   - component: {fileID: 730931006}
-  - component: {fileID: 730931005}
   m_Layer: 0
   m_Name: Display 3
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &730931005
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 730931004}
-  m_Enabled: 1
 --- !u!20 &730931006
 Camera:
   m_ObjectHideFlags: 0
@@ -3364,6 +3347,24 @@ Transform:
   m_Father: {fileID: 812283389}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &766206203 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1900741106450332, guid: f538c1fe326dc0944b6e90efddf4ce63, type: 3}
+  m_PrefabInstance: {fileID: 1013780832}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &766206207
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 766206203}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.1221108, y: 0.710517, z: 0.4446683}
+  m_Center: {x: -0.04030347, y: 0.35507837, z: -0.04434228}
 --- !u!1001 &780547421
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5622,6 +5623,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4227529355371724, guid: 5c474a6ba92e1694c88c1b7a86df7682, type: 3}
   m_PrefabInstance: {fileID: 1286304265}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1295134665 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1270924573552858, guid: 6933375681575c64487a3427da0d73b1, type: 3}
+  m_PrefabInstance: {fileID: 366031369}
+  m_PrefabAsset: {fileID: 0}
+--- !u!64 &1295134668
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295134665}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 2d7fbc8e8e8b5e54a9acfe399d1cef71, type: 3}
 --- !u!1001 &1297665781
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12432,22 +12452,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1798280455}
   - component: {fileID: 1798280454}
-  - component: {fileID: 1798280453}
   m_Layer: 0
   m_Name: Display 2
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &1798280453
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1798280452}
-  m_Enabled: 1
 --- !u!20 &1798280454
 Camera:
   m_ObjectHideFlags: 0
