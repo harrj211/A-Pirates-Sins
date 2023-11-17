@@ -4491,7 +4491,7 @@ GameObject:
   m_Component:
   - component: {fileID: 155397200}
   - component: {fileID: 155397199}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Map Camera
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8518,7 +8518,7 @@ GameObject:
   - component: {fileID: 256439418}
   - component: {fileID: 256439417}
   - component: {fileID: 256439416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13643,7 +13643,7 @@ GameObject:
   - component: {fileID: 410386859}
   - component: {fileID: 410386858}
   - component: {fileID: 410386857}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16440,7 +16440,7 @@ GameObject:
   - component: {fileID: 487525046}
   - component: {fileID: 487525045}
   - component: {fileID: 487525044}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27978,7 +27978,7 @@ GameObject:
   - component: {fileID: 757823950}
   - component: {fileID: 757823949}
   - component: {fileID: 757823948}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48836,7 +48836,7 @@ GameObject:
   - component: {fileID: 1391062461}
   - component: {fileID: 1391062463}
   - component: {fileID: 1391062462}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57336,7 +57336,7 @@ GameObject:
   - component: {fileID: 1506661942}
   - component: {fileID: 1506661941}
   - component: {fileID: 1506661940}
-  m_Layer: 7
+  m_Layer: 8
   m_Name: Plane
   m_TagString: place
   m_Icon: {fileID: 0}
@@ -68109,7 +68109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1785800510}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: RFG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -76292,7 +76292,7 @@ GameObject:
   - component: {fileID: 1998207734}
   - component: {fileID: 1998207733}
   - component: {fileID: 1998207732}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
