@@ -68016,6 +68016,7 @@ MonoBehaviour:
   audioSource: {fileID: 1739209500}
   clip: {fileID: 8300000, guid: 9e01a9ee1dfd46e4b932124faf582212, type: 3}
   volume: 1
+  buttonDelay: 2
 --- !u!82 &1739209500
 AudioSource:
   m_ObjectHideFlags: 0
@@ -68072,7 +68073,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
