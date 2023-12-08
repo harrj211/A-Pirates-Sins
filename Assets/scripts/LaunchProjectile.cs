@@ -18,8 +18,6 @@ public class LaunchProjectile : MonoBehaviour
     void Update()
     {
         m_fieldofview = 60f;
-        
-        
 
         if (Input.GetButtonDown("Fire1"))
         {
