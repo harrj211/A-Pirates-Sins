@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
-
 public class LaunchProjectile : MonoBehaviour
 {
     //Projectile Launching
@@ -13,10 +11,12 @@ public class LaunchProjectile : MonoBehaviour
     float m_fieldofview;
     //Audio (Song)
     public AudioSource audioSource;
-    public AudioClip clip;
+   
     public float volume;
     public int Ammo;
-    public Text ammo_text;
+    public AudioClip click;
+    public AudioClip shot;
+
 
 
     Vector3 launcher;
@@ -24,6 +24,7 @@ public class LaunchProjectile : MonoBehaviour
     void Start()
     {
         Ammo = 1;
+        
     }
 
     void Update()
@@ -32,7 +33,7 @@ public class LaunchProjectile : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Ammo > 0)
         {
-            audioSource.PlayOneShot(clip, volume);
+            audioSource.PlayOneShot(shot, volume);
 
             GameObject ball = Instantiate(projectile, transform.position, transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 0, launchVelocity));
@@ -40,6 +41,7 @@ public class LaunchProjectile : MonoBehaviour
              muzzleflash.Play();
 
              Ammo = 0;
+            
           
         }
 
@@ -53,9 +55,16 @@ public class LaunchProjectile : MonoBehaviour
             m_fieldofview = 10f;
         }
 
+        if (Input.GetButtonDown("Fire1") && Ammo <= 0)
+        {
+            audioSource = GetComponent<AudioSource>();
+            audioSource.PlayOneShot(click, volume);
+        }
+
         if (Input.GetKeyDown (KeyCode.R))
         {
 		    Ammo = 1;
+         
         }
 
     Camera.main.fieldOfView = m_fieldofview;
@@ -63,6 +72,6 @@ public class LaunchProjectile : MonoBehaviour
     
     private void UpdateAmmoText()
     {
-        ammo_text.text = $"Ammo";
+    
     }
 }
