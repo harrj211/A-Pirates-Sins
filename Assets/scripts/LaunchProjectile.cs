@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
 public class LaunchProjectile : MonoBehaviour
 {
     //Projectile Launching
@@ -11,11 +14,18 @@ public class LaunchProjectile : MonoBehaviour
     float m_fieldofview;
     //Audio (Song)
     public AudioSource audioSource;
-   
-    public float volume;
+   public float volume;
+
     public int Ammo;
+    public float reloadTime;
+    public int canR;
+
     public AudioClip click;
     public AudioClip shot;
+    public AudioClip reload;
+
+    public TMP_Text txt;
+
 
 
 
@@ -23,7 +33,9 @@ public class LaunchProjectile : MonoBehaviour
 
     void Start()
     {
+        txt.text = "1/∞";
         Ammo = 1;
+        canR = 1;
         
     }
 
@@ -41,6 +53,8 @@ public class LaunchProjectile : MonoBehaviour
              muzzleflash.Play();
 
              Ammo = 0;
+
+             txt.text = "0/∞";
             
           
         }
@@ -61,17 +75,26 @@ public class LaunchProjectile : MonoBehaviour
             audioSource.PlayOneShot(click, volume);
         }
 
-        if (Input.GetKeyDown (KeyCode.R))
+        if (Input.GetKeyDown (KeyCode.R) && canR > 0 && Ammo <= 0)
         {
-		    Ammo = 1;
+
+		    StartCoroutine(Reload());
+            audioSource.PlayOneShot(reload, volume);
+            canR = 0;
          
         }
 
     Camera.main.fieldOfView = m_fieldofview;
     }
     
-    private void UpdateAmmoText()
-    {
     
+    private IEnumerator Reload()
+    { 
+            yield return new WaitForSeconds(reloadTime);
+            txt.text = "1/∞";
+            Ammo = 1;
+            canR = 1;
+        
+
     }
 }

@@ -130,5 +130,5 @@ MonoBehaviour:
   rbs: {fileID: 3520311145937212474}
   direction: {fileID: 5435937941456387567}
   self: {fileID: 1939653861611263722}
-  explosionForce: 50
-  explosionRadius: 10
+  explosionForce: -100
+  explosionRadius: -40
