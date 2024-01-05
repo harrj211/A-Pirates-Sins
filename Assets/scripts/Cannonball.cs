@@ -5,11 +5,15 @@ using UnityEngine;
 public class Cannonball : MonoBehaviour
 {
     public Rigidbody rbs;
+    public int canHit = 1;
     public Transform direction;
     public GameObject self;
+    public AudioClip collide;
+    public float volume;
     [SerializeField] float explosionForce = 10;
     [SerializeField] float explosionRadius = 10;
     Collider[] colliders = new Collider[2000];
+
 
     // Update is called once per frame
     void ExplodeNonAlloc()
@@ -51,21 +55,26 @@ public class Cannonball : MonoBehaviour
 //Detect collisions between the GameObjects with Colliders attached
     void OnCollisionEnter(Collision collision)
     {
-        ExplodeNonAlloc();
-       
+         GetComponent<AudioSource>().PlayOneShot(collide, volume);
+
+        if (canHit == 1)
+        {
+            canHit = 0;
+            ExplodeNonAlloc();
+        }
 
         //Check for a match with the specified name on any GameObject that collides with your GameObject
-        if (collision.gameObject.name == "MyGameObjectName")
+        if (collision.gameObject.name == "Cube")
         {
-            //If the GameObject's name matches the one you suggest, output this message in the console
-            Debug.Log("Do something here");
+          
         }
 
         //Check for a match with the specific tag on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "MyGameObjectTag")
+        if (collision.gameObject.tag == "Plane")
         {
-            //If the GameObject has the same tag as specified, output this message in the console
-            Debug.Log("Do something else here");
+          
         }
     }
+
+    
 }
