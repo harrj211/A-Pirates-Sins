@@ -19,14 +19,14 @@ public class PlayerMovement : MonoBehaviour
     private float rotationX = 0;
     private CharacterController characterController;
     public AudioSource audioSource;
-    public AudioClip clip;
+    public AudioClip song;
     public float volume;
 
     private bool canMove = true;
 
     void Start()
     {
-        audioSource.PlayOneShot(clip, volume);
+        audioSource.PlayOneShot(song, volume);
 
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;

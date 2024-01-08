@@ -66,7 +66,7 @@ public class LaunchProjectile : MonoBehaviour
 
         if (Input.GetButton("Fire2"))
         {
-            m_fieldofview = 10f;
+            m_fieldofview = 26f;
         }
 
         if (Input.GetButtonDown("Fire1") && Ammo <= 0)
