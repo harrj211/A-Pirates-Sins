@@ -134,7 +134,7 @@ MonoBehaviour:
   self: {fileID: 1939653861611263722}
   collide: {fileID: 8300000, guid: 1e981e3e0200d9f48ae9bacae2b0b853, type: 3}
   volume: 1
-  explosionForce: 150
+  explosionForce: 200
   explosionRadius: 15
 --- !u!82 &4402863226948603842
 AudioSource:
