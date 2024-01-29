@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4399968080755441008}
   - component: {fileID: 7423743610272308046}
   - component: {fileID: 6488096408870090946}
-  - component: {fileID: 2565271578960691966}
+  - component: {fileID: 7500902579172417480}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2565271578960691966
+--- !u!136 &7500902579172417480
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -109,7 +109,7 @@ GameObject:
   - component: {fileID: 3712414364396714451}
   - component: {fileID: 6404771458402181848}
   - component: {fileID: 552079043773641520}
-  - component: {fileID: 6211914136349706050}
+  - component: {fileID: 8555976791975437189}
   m_Layer: 0
   m_Name: Cylinder (1)
   m_TagString: Untagged
@@ -182,7 +182,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &6211914136349706050
+--- !u!136 &8555976791975437189
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -207,8 +207,8 @@ GameObject:
   - component: {fileID: 5887493838078833207}
   - component: {fileID: 3062327331450247643}
   - component: {fileID: 6696245188890295013}
-  - component: {fileID: 3603953116851279577}
   - component: {fileID: 2099046105153430807}
+  - component: {fileID: 7811319100107140996}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -283,20 +283,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &3603953116851279577
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7886525545349725634}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!54 &2099046105153430807
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -313,3 +299,16 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!65 &7811319100107140996
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7886525545349725634}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3, y: 2, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: -0.00000011920929}
