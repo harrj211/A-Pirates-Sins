@@ -6,6 +6,7 @@ public class Cannonball : MonoBehaviour
 {
     public Rigidbody rbs;
     public int canHit = 1;
+    public ParticleSystem crash;
     public Transform direction;
     public GameObject self;
     public AudioClip collide;
@@ -18,6 +19,7 @@ public class Cannonball : MonoBehaviour
     // Update is called once per frame
     void ExplodeNonAlloc()
     {
+        
         //Debug.Log("Do something here");
         int numColliders = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, colliders);
         if (numColliders > 0)
@@ -35,6 +37,8 @@ public class Cannonball : MonoBehaviour
                     //Debug.Log("radius = " + explosionRadius);
                     //Debug.Log("rb = " + rb);
                     //Debug.Log("boom");
+                    
+                    
                 }
             }
         }
@@ -56,24 +60,18 @@ public class Cannonball : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
          GetComponent<AudioSource>().PlayOneShot(collide, volume);
-
+        
+        
         if (canHit == 1)
         {
+            crash.Play();
             canHit = 0;
             ExplodeNonAlloc();
         }
 
-        //Check for a match with the specified name on any GameObject that collides with your GameObject
-        if (collision.gameObject.name == "Cube")
-        {
-          
-        }
+        
 
-        //Check for a match with the specific tag on any GameObject that collides with your GameObject
-        if (collision.gameObject.tag == "Plane")
-        {
-          
-        }
+        //Check for a match with the specified name on any GameObject that collides with your GameObject
     }
 
     
