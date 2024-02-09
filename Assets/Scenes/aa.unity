@@ -49170,11 +49170,13 @@ MonoBehaviour:
   muzzleflash: {fileID: 1391062463}
   audioSource: {fileID: 1739209500}
   volume: 1
+  shotvolume: 25
+  clickvolume: 3
   Ammo: 0
   reloadTime: 4
   canR: 0
-  click: {fileID: 8300000, guid: d3efb821be87ae143bb7f9907287705f, type: 3}
-  shot: {fileID: 8300000, guid: 9e01a9ee1dfd46e4b932124faf582212, type: 3}
+  click: {fileID: 8300000, guid: 40f30b7c640f01641ad98f75dc2d07dd, type: 3}
+  shot: {fileID: 8300000, guid: f62cf8f6018ef1a42a3117012f048970, type: 3}
   reload: {fileID: 8300000, guid: 59a74b09ea78cb346a2e87f2a621d814, type: 3}
   txt: {fileID: 409934877}
 --- !u!82 &1739209500
@@ -49187,7 +49189,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 9e01a9ee1dfd46e4b932124faf582212, type: 3}
+  m_audioClip: {fileID: 8300000, guid: f62cf8f6018ef1a42a3117012f048970, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1

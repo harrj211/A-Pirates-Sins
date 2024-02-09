@@ -15,6 +15,8 @@ public class LaunchProjectile : MonoBehaviour
     //Audio (Song)
     public AudioSource audioSource;
    public float volume;
+   public float shotvolume;
+   public float clickvolume;
 
     public int Ammo;
     public float reloadTime;
@@ -45,7 +47,7 @@ public class LaunchProjectile : MonoBehaviour
 
         if (Input.GetButtonDown("Fire1") && Ammo > 0)
         {
-            audioSource.PlayOneShot(shot, volume);
+            audioSource.PlayOneShot(shot, shotvolume);
 
             GameObject ball = Instantiate(projectile, transform.position, transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 0, launchVelocity));
@@ -72,7 +74,7 @@ public class LaunchProjectile : MonoBehaviour
         if (Input.GetButtonDown("Fire1") && Ammo <= 0)
         {
             audioSource = GetComponent<AudioSource>();
-            audioSource.PlayOneShot(click, volume);
+            audioSource.PlayOneShot(click, clickvolume);
         }
 
         if (Input.GetKeyDown (KeyCode.R) && canR > 0 && Ammo <= 0)
