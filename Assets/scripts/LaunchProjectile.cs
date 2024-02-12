@@ -28,6 +28,10 @@ public class LaunchProjectile : MonoBehaviour
 
     public TMP_Text txt;
 
+    [SerializeField] float explosionForce = 10;
+    [SerializeField] float explosionRadius = 10;
+    Collider[] colliders = new Collider[2000];
+
 
 
 
@@ -51,6 +55,8 @@ public class LaunchProjectile : MonoBehaviour
 
             GameObject ball = Instantiate(projectile, transform.position, transform.rotation);
             ball.GetComponent<Rigidbody>().AddRelativeForce(new Vector3 (0, 0, launchVelocity));
+
+            ExplodeNonAlloc();
 
              muzzleflash.Play();
 
@@ -87,6 +93,33 @@ public class LaunchProjectile : MonoBehaviour
         }
 
     Camera.main.fieldOfView = m_fieldofview;
+    }
+
+    void ExplodeNonAlloc()
+    {
+        
+        //Debug.Log("Do something here");
+        int numColliders = Physics.OverlapSphereNonAlloc(transform.position, explosionRadius, colliders);
+        if (numColliders > 0)
+        {
+            for (int i = 0; i < numColliders; i++)
+            {
+                //Debug.Log("colliders = " + numColliders);
+                //Debug.Log("i =" + i);
+
+                if (colliders[i].TryGetComponent(out Rigidbody rb))
+                {
+                    rb.AddExplosionForce(explosionForce, transform.position, explosionRadius, 1);
+                    //Debug.Log("transform = " + transform);
+                    //Debug.Log("force = " + explosionForce);
+                    //Debug.Log("radius = " + explosionRadius);
+                    //Debug.Log("rb = " + rb);
+                    //Debug.Log("boom");
+                    
+                    
+                }
+            }
+        }
     }
     
     

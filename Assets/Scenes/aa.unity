@@ -49179,6 +49179,8 @@ MonoBehaviour:
   shot: {fileID: 8300000, guid: f62cf8f6018ef1a42a3117012f048970, type: 3}
   reload: {fileID: 8300000, guid: 59a74b09ea78cb346a2e87f2a621d814, type: 3}
   txt: {fileID: 409934877}
+  explosionForce: 5
+  explosionRadius: 5
 --- !u!82 &1739209500
 AudioSource:
   m_ObjectHideFlags: 0
