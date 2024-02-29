@@ -13,14 +13,14 @@ public class PickupObjTrigger : MonoBehaviour
     public GameObject TriggerObj;
 //object that dissapeares
     public GameObject DeletedObj;
-    public GameObject Tutorialtxt;
-    public GameObject Tutorialtxt2;
+   
 
 
     void Start()
     {
         ColectedObj.SetActive(false);
     }
+
 
     private void OnTriggerStay(Collider other)
     {
@@ -33,15 +33,16 @@ public class PickupObjTrigger : MonoBehaviour
                 // deaactivates the DeleatedObj object
                 DeletedObj.SetActive(false);
 
-                Tutorialtxt.SetActive(false);
+
                 //activates object 1
                 ColectedObj.SetActive(true);
                 //activates object 
                 TriggerObj.SetActive(true);
 
-                Tutorialtxt2.SetActive(true);
+
                 
             }
         }
     }
+
 }

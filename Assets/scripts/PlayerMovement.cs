@@ -25,6 +25,14 @@ public class PlayerMovement : MonoBehaviour
     private bool canMove = true;
     private bool cankey = false;
 
+    public GameObject Tutorialtxt;
+    public GameObject Tutorialtxt2;
+    public GameObject Tutorialtxt3;
+    public GameObject Tutorialtxt3_1;
+    public GameObject Tutorialtxt4;
+    public float cannon_ball = 0;
+    public float canR = 0;
+
     void Start()
     {
         audioSource.PlayOneShot(song, volume);
@@ -39,8 +47,37 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.E) && cankey == false)
         {
             cankey = true;
+            Tutorialtxt.SetActive(false);
+            Tutorialtxt2.SetActive(true);
         }
 
+        if (Input.GetButtonDown("Fire1") && canR == 0)
+        {
+            Tutorialtxt2.SetActive(false);
+
+            Tutorialtxt3.SetActive(true);
+            Tutorialtxt3_1.SetActive(true);
+            canR = 1;
+        }
+
+        if(Input.GetKey(KeyCode.R) && canR == 1)
+        {
+            cannon_ball = 1;
+            
+        }
+        
+        if (Input.GetButtonDown("Fire1") && cannon_ball == 1)
+        {
+            Tutorialtxt3.SetActive(false);
+            Tutorialtxt3_1.SetActive(false);
+
+            Tutorialtxt4.SetActive(true);
+
+        }
+
+
+        if (cankey == true)
+        {
             Vector3 forward = transform.TransformDirection(Vector3.forward);
             Vector3 right = transform.TransformDirection(Vector3.right);
 
@@ -81,6 +118,7 @@ public class PlayerMovement : MonoBehaviour
 
             characterController.Move(moveDirection * Time.deltaTime);
 
+        }
 
         if (canMove)
         {
@@ -89,5 +127,6 @@ public class PlayerMovement : MonoBehaviour
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * lookSpeed, 0);
         }
+
     }
 }

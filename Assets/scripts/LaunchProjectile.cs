@@ -49,6 +49,8 @@ public class LaunchProjectile : MonoBehaviour
     {
         m_fieldofview = 60f;
 
+        
+
         if (Input.GetButtonDown("Fire1") && Ammo > 0)
         {
             audioSource.PlayOneShot(shot, shotvolume);
