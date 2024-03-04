@@ -30,8 +30,13 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Tutorialtxt3;
     public GameObject Tutorialtxt3_1;
     public GameObject Tutorialtxt4;
+    public GameObject Amelia1;
+    public GameObject Amelia2;
+    public GameObject Amelia3;
+    public GameObject Panel;
     public float cannon_ball = 0;
     public float canR = 0;
+    public float final_message = 0;
 
     void Start()
     {
@@ -48,15 +53,20 @@ public class PlayerMovement : MonoBehaviour
         {
             cankey = true;
             Tutorialtxt.SetActive(false);
+            Amelia1.SetActive(false);
+
             Tutorialtxt2.SetActive(true);
+            Amelia2.SetActive(true);
         }
 
         if (Input.GetButtonDown("Fire1") && canR == 0)
         {
             Tutorialtxt2.SetActive(false);
+            Amelia2.SetActive(false);
 
             Tutorialtxt3.SetActive(true);
             Tutorialtxt3_1.SetActive(true);
+            Amelia3.SetActive(true);
             canR = 1;
         }
 
@@ -72,8 +82,17 @@ public class PlayerMovement : MonoBehaviour
             Tutorialtxt3_1.SetActive(false);
 
             Tutorialtxt4.SetActive(true);
+            final_message = 1;
+        }
+
+        if(Input.GetKey(KeyCode.R) && final_message == 1)
+        {
+            Tutorialtxt4.SetActive(false);
+            Panel.SetActive(false);
 
         }
+
+
 
 
         if (cankey == true)
