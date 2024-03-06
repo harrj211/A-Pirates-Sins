@@ -24,6 +24,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canMove = true;
     private bool cankey = false;
+    private bool tutorial = true;
 
     public GameObject Tutorialtxt;
     public GameObject Tutorialtxt2;
@@ -33,6 +34,7 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Amelia1;
     public GameObject Amelia2;
     public GameObject Amelia3;
+    public GameObject Amelia4;
     public GameObject Panel;
     public float cannon_ball = 0;
     public float canR = 0;
@@ -59,39 +61,46 @@ public class PlayerMovement : MonoBehaviour
             Amelia2.SetActive(true);
         }
 
-        if (Input.GetButtonDown("Fire1") && canR == 0)
+        if(tutorial == true)
         {
-            Tutorialtxt2.SetActive(false);
-            Amelia2.SetActive(false);
+            if (Input.GetButtonDown("Fire1") && canR == 0)
+            {
+                Tutorialtxt2.SetActive(false);
+                Amelia2.SetActive(false);
 
-            Tutorialtxt3.SetActive(true);
-            Tutorialtxt3_1.SetActive(true);
-            Amelia3.SetActive(true);
-            canR = 1;
-        }
+                Tutorialtxt3.SetActive(true);
+                Tutorialtxt3_1.SetActive(true);
+                Amelia3.SetActive(true);
+                canR = 1;
+            }
 
-        if(Input.GetKey(KeyCode.R) && canR == 1)
-        {
-            cannon_ball = 1;
+            if(Input.GetKey(KeyCode.R) && canR == 1)
+            {
+                cannon_ball = 1;
+                
+            }
             
+            if (Input.GetButtonDown("Fire1") && cannon_ball == 1)
+            {
+                Tutorialtxt3.SetActive(false);
+                Tutorialtxt3_1.SetActive(false);
+                Amelia3.SetActive(false);
+
+                Tutorialtxt4.SetActive(true);
+                Amelia4.SetActive(true);
+                final_message = 1;
+
+            }
+
+            if(Input.GetKey(KeyCode.R) && final_message == 1)
+            {
+                Tutorialtxt4.SetActive(false);
+                Amelia4.SetActive(false);
+                Panel.SetActive(false);
+                tutorial = false;
+
+            }
         }
-        
-        if (Input.GetButtonDown("Fire1") && cannon_ball == 1)
-        {
-            Tutorialtxt3.SetActive(false);
-            Tutorialtxt3_1.SetActive(false);
-
-            Tutorialtxt4.SetActive(true);
-            final_message = 1;
-        }
-
-        if(Input.GetKey(KeyCode.R) && final_message == 1)
-        {
-            Tutorialtxt4.SetActive(false);
-            Panel.SetActive(false);
-
-        }
-
 
 
 

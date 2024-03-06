@@ -7490,6 +7490,7 @@ RectTransform:
   - {fileID: 462370521}
   - {fileID: 783758366}
   - {fileID: 1245218959}
+  - {fileID: 1218144888}
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -30126,6 +30127,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5396996275177854619, guid: 806215bba384cac4a97ad0735473fe80, type: 3}
   m_PrefabInstance: {fileID: 557931423}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1218144887
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1218144888}
+  - component: {fileID: 1218144890}
+  - component: {fileID: 1218144889}
+  m_Layer: 5
+  m_Name: Ameilia4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1218144888
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218144887}
+  m_LocalRotation: {x: -0, y: -0, z: 0.24495731, w: 0.9695339}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 359583790}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.359}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 795, y: 170}
+  m_SizeDelta: {x: 635, y: 1544}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1218144889
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218144887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 180063c66502efe4abcd4ff6febc8405, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1218144890
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1218144887}
+  m_CullTransparentMesh: 1
 --- !u!4 &1218772431 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5396996275177854619, guid: 806215bba384cac4a97ad0735473fe80, type: 3}
@@ -30679,7 +30756,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 46cd0dc332188cd409b66ab2945a8d9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f33140f418f6f4c43816e3d025e16b6f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -46227,6 +46304,7 @@ MonoBehaviour:
   Amelia1: {fileID: 462370520}
   Amelia2: {fileID: 783758365}
   Amelia3: {fileID: 1245218958}
+  Amelia4: {fileID: 1218144887}
   Panel: {fileID: 2094580980}
   cannon_ball: 0
   canR: 0
