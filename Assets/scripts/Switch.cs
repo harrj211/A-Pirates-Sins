@@ -11,7 +11,9 @@ public class Switch : MonoBehaviour
     {
         if(title == 1 && Input.GetButtonDown("Fire1"))
         {
+            SceneManager.UnloadScene (sceneName:"Title");
             SceneManager.LoadScene (sceneName:"Prison");
+            
             title = 0;
         }
     }
