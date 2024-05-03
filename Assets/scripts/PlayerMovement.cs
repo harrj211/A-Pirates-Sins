@@ -63,7 +63,7 @@ public class PlayerMovement : MonoBehaviour
 
         if(tutorial == true)
         {
-            if (Input.GetButtonDown("Fire1") && canR == 0)
+            if (Input.GetButtonDown("Fire1") && cankey == true && canR == 0)
             {
                 Tutorialtxt2.SetActive(false);
                 Amelia2.SetActive(false);
