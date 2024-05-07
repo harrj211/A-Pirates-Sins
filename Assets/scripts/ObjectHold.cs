@@ -20,16 +20,18 @@ public class ObjectHold : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.Q) && holding == 0)
         {
             StartPickUp();
             Debug.Log("Picked Up");
+            StartCoroutine(HoldingOn());
         }
 
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(KeyCode.Q) && holding == 1)
         {
             Drop();
             Debug.Log("Dropped");
+            StartCoroutine(HoldingOff());
         }
     }
 
@@ -40,8 +42,8 @@ public class ObjectHold : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            Target target = hit.transform.GetComponent<Target>();
-            if (target != null)
+            hit.transform.GetComponent<Rigidbody>();
+            if (gameObject.tag == "canPickUp")
             {
                 PickUp();
             }
@@ -63,12 +65,16 @@ public class ObjectHold : MonoBehaviour
 
     }
 
-     private IEnumerator PickUpSwitch()
+    private IEnumerator HoldingOn()
     { 
             yield return new WaitForSeconds(1);
-            holding = 1;
-        
+            holding = 1;    
+    }
 
+    private IEnumerator HoldingOff()
+    { 
+            yield return new WaitForSeconds(1);
+            holding = 0;
     }
     
 }
