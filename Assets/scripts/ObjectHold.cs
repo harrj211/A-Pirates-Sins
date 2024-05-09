@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class ObjectHold : MonoBehaviour
 {
-    
-    public GameObject Object;
+
     public Transform PlayerTransform;
     public float range = 3f;
     public float Go = 100f;
@@ -42,26 +41,29 @@ public class ObjectHold : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            hit.transform.GetComponent<Rigidbody>();
-            if (gameObject.tag == "canPickUp")
+            if(hit.transform.CompareTag("canPickUp"))
             {
+                hit.transform.GetComponent<Rigidbody>();
+
+                if (GameObject.FindWithTag("canPickUp"))
                 PickUp();
             }
+        
         }
     }
 
     void PickUp ()
     {
-        GetComponent<Rigidbody>().isKinematic = true;
-        Object.GetComponent<Rigidbody>().useGravity = false;
-        Object.transform.SetParent(PlayerTransform);
+        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().isKinematic = true;
+        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().useGravity = false;
+        GameObject.FindWithTag("canPickUp").transform.SetParent(PlayerTransform);
     }
 
     void Drop ()
     {
         PlayerTransform.DetachChildren();
-        GetComponent<Rigidbody>().isKinematic = false;
-        Object.GetComponent<Rigidbody>().useGravity = true;
+        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().isKinematic = false;
+        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().useGravity = true;
 
     }
 
