@@ -10,7 +10,7 @@ public class ObjectHold : MonoBehaviour
     public float Go = 100f;
     public Camera Camera;
     int holding = 0;
-    GameObject Upies;
+    GameObject Uppies;
 
 
     void Start()
@@ -44,7 +44,7 @@ public class ObjectHold : MonoBehaviour
 
             if (hit.collider.tag == "canPickUp")
             {
-                Upies = hit.collider.gameObject;
+                Uppies = hit.collider.gameObject;
                 hit.transform.GetComponent<Rigidbody>();
 
                 PickUp();
@@ -57,16 +57,16 @@ public class ObjectHold : MonoBehaviour
 
     void PickUp ()
     {
-        Upies.GetComponent<Rigidbody>().isKinematic = true;
-        Upies.GetComponent<Rigidbody>().useGravity = false;
-        Upies.transform.SetParent(PlayerTransform);
+        Uppies.GetComponent<Rigidbody>().isKinematic = true;
+        Uppies.GetComponent<Rigidbody>().useGravity = false;
+        Uppies.transform.SetParent(PlayerTransform);
     }
 
     void Drop ()
     {
         PlayerTransform.DetachChildren();
-        Upies.GetComponent<Rigidbody>().isKinematic = false;
-        Upies.GetComponent<Rigidbody>().useGravity = true;
+        Uppies.GetComponent<Rigidbody>().isKinematic = false;
+        Uppies.GetComponent<Rigidbody>().useGravity = true;
 
     }
 
