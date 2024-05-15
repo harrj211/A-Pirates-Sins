@@ -10,6 +10,7 @@ public class ObjectHold : MonoBehaviour
     public float Go = 100f;
     public Camera Camera;
     int holding = 0;
+    GameObject Upies;
 
 
     void Start()
@@ -41,12 +42,14 @@ public class ObjectHold : MonoBehaviour
         {
             Debug.Log(hit.transform.name);
 
-            if(hit.transform.CompareTag("canPickUp"))
+            if (hit.collider.tag == "canPickUp")
             {
+                Upies = hit.collider.gameObject;
                 hit.transform.GetComponent<Rigidbody>();
 
-                if (GameObject.FindWithTag("canPickUp"))
                 PickUp();
+                    
+            //if (hit.collider.tag == "namehere")
             }
         
         }
@@ -54,16 +57,16 @@ public class ObjectHold : MonoBehaviour
 
     void PickUp ()
     {
-        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().isKinematic = true;
-        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().useGravity = false;
-        GameObject.FindWithTag("canPickUp").transform.SetParent(PlayerTransform);
+        Upies.GetComponent<Rigidbody>().isKinematic = true;
+        Upies.GetComponent<Rigidbody>().useGravity = false;
+        Upies.transform.SetParent(PlayerTransform);
     }
 
     void Drop ()
     {
         PlayerTransform.DetachChildren();
-        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().isKinematic = false;
-        GameObject.FindWithTag("canPickUp").GetComponent<Rigidbody>().useGravity = true;
+        Upies.GetComponent<Rigidbody>().isKinematic = false;
+        Upies.GetComponent<Rigidbody>().useGravity = true;
 
     }
 
