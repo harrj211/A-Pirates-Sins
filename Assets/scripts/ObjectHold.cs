@@ -23,14 +23,14 @@ public class ObjectHold : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Q) && holding == 0)
         {
             StartPickUp();
-            Debug.Log("Picked Up");
+
             StartCoroutine(HoldingOn());
         }
 
         if (Input.GetKeyDown(KeyCode.Q) && holding == 1)
         {
             Drop();
-            Debug.Log("Dropped");
+
             StartCoroutine(HoldingOff());
         }
     }
@@ -40,7 +40,7 @@ public class ObjectHold : MonoBehaviour
         RaycastHit hit;
         if (Physics.Raycast(Camera.transform.position, Camera.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
+
 
             if (hit.collider.tag == "canPickUp")
             {
