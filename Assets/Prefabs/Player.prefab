@@ -232,7 +232,7 @@ Transform:
   - {fileID: 658246848978114580}
   - {fileID: 658246849192637858}
   m_Father: {fileID: 658246849410770006}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &658246849052061146
 MeshFilter:
@@ -618,10 +618,10 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 658246849567517568}
   - {fileID: 658246849052061157}
   - {fileID: 658246849429137326}
   - {fileID: 658246849641487493}
-  - {fileID: 658246849567517568}
   m_Father: {fileID: 658246849518677954}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 39.808, y: 0, z: 0}
@@ -865,7 +865,7 @@ Transform:
   m_Children:
   - {fileID: 658246849429078177}
   m_Father: {fileID: 658246849410770006}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &658246849429137325
 SpriteRenderer:
@@ -943,6 +943,7 @@ GameObject:
   - component: {fileID: 658246849518677955}
   - component: {fileID: 658246849518677964}
   - component: {fileID: 658246849518677965}
+  - component: {fileID: 5039402725545118666}
   - component: {fileID: 658246849518677958}
   - component: {fileID: 658246849518677959}
   - component: {fileID: 3047940794540625389}
@@ -1035,6 +1036,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &5039402725545118666
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658246849518677967}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!143 &658246849518677958
 CharacterController:
   m_ObjectHideFlags: 0
@@ -1075,6 +1092,7 @@ MonoBehaviour:
   defaultHeight: 2
   crouchHeight: 1
   crouchSpeed: 3
+  m_Thrust: 20
   audioSource: {fileID: 658246849518677957}
   song: {fileID: 8300000, guid: 91cb4f8c9bec7ba47847ae80297fe055, type: 3}
   volume: 0.05
@@ -1088,6 +1106,7 @@ MonoBehaviour:
   Amelia3: {fileID: 0}
   Amelia4: {fileID: 0}
   Panel: {fileID: 0}
+  m_Rigidbody: {fileID: 0}
   cannon_ball: 0
   canR: 0
   final_message: 0
@@ -1105,7 +1124,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerTransform: {fileID: 658246849567517568}
   range: 3
-  Go: 100
   Camera: {fileID: 658246849410770007}
 --- !u!82 &658246849518677957
 AudioSource:
@@ -1226,13 +1244,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 658246849567517569}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 658246849410770006}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &658246850532415949
 GameObject:
@@ -1455,7 +1473,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6848826487299671596, guid: 017009d8c9d30a74eb9afe91f1d9586f, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6848826487299671596, guid: 017009d8c9d30a74eb9afe91f1d9586f, type: 3}
       propertyPath: m_LocalPosition.x

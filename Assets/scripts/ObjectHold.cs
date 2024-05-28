@@ -7,7 +7,6 @@ public class ObjectHold : MonoBehaviour
 
     public Transform PlayerTransform;
     public float range = 3f;
-    public float Go = 100f;
     public Camera Camera;
     int holding = 0;
     GameObject Uppies;

@@ -5,7 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(CharacterController))]
 public class PlayerMovement : MonoBehaviour
 {
-    public Camera playerCamera;
+    
     public float walkSpeed = 6f;
     public float runSpeed = 12f;
     public float jumpPower = 7f;
@@ -15,17 +15,19 @@ public class PlayerMovement : MonoBehaviour
     public float defaultHeight = 2f;
     public float crouchHeight = 1f;
     public float crouchSpeed = 3f;
+    public float volume;
     private Vector3 moveDirection = Vector3.zero;
     private float rotationX = 0;
     private CharacterController characterController;
     public AudioSource audioSource;
     public AudioClip song;
-    public float volume;
+    
 
     private bool canMove = true;
     private bool cankey = false;
     private bool tutorial = true;
 
+    public Camera playerCamera;
     public GameObject Tutorialtxt;
     public GameObject Tutorialtxt2;
     public GameObject Tutorialtxt3;
@@ -35,10 +37,11 @@ public class PlayerMovement : MonoBehaviour
     public GameObject Amelia2;
     public GameObject Amelia3;
     public GameObject Amelia4;
-    public GameObject Panel;
-    public float cannon_ball = 0;
-    public float canR = 0;
-    public float final_message = 0;
+    public GameObject Panel; 
+
+    int cannon_ball = 0;
+    int canR = 0;
+    int final_message = 0;
 
     void Start()
     {
@@ -47,6 +50,8 @@ public class PlayerMovement : MonoBehaviour
         characterController = GetComponent<CharacterController>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+
     }
 
     void Update()
