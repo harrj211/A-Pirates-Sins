@@ -9,6 +9,8 @@ TagManager:
   - theobjectToIgnore
   - place
   - canPickUp
+  - Ball
+  - NextLevel
   layers:
   - Default
   - TransparentFX
