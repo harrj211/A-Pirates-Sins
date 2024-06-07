@@ -17,7 +17,7 @@ public class NextLevel : MonoBehaviour
         
     }
 
-    void OnTriggerStay(Collision collision)
+    void OnTriggerStay()
     {
         if(tag == "NextLevel")
         {
