@@ -21,8 +21,8 @@ public class NextLevel : MonoBehaviour
     {
         if(tag == "NextLevel")
         {
-            SceneManager.UnloadSceneAsync (sceneName:"Prison");
-            SceneManager.LoadScene (sceneName:"Title");
+            SceneManager.UnloadSceneAsync ("Prison");
+            SceneManager.LoadScene ("End");
         }
     }
 }
